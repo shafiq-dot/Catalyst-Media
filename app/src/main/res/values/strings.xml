@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AssessmentTaskApp</string>
+    <string name="what_do_you_want">What do you want to watch?</string>
+    <string name="Detail">Details</string>
+    <string name="Trending">Trending</string>
+    <string name="Popular">Popular</string>
+    <string name="Top_rated">Top-Rated</string>
+    <string name="NowPlaying">Now Playing</string>
+    <string name="Upcoming">Upcoming</string>
+    <string name="About">About Movie</string>
+    <string name="Cast">Cast</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/baseColor"
+    tools:context=".ui.home.HomeActivity">
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="@dimen/font_size_18sp"
+        android:text="@string/Trending"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:id="@+id/recyclerView"
+        tools:listitem="@layout/item_trending"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:layout_marginStart="@dimen/margin_20dp"
+        app:tabTextColor="@color/selected_tab_white_color"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectedTextColor="@color/selected_tab_white_color"
+        app:tabIndicatorColor="@color/selected_tab_white_color" />
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="@dimen/margin_20dp"
+
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:id="@+id/recyclerView2"
+        tools:listitem="@layout/item_movies"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:id="@+id/recyclerView3"
+        tools:listitem="@layout/item_movies"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:id="@+id/recyclerView4"
+        tools:listitem="@layout/item_movies"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:id="@+id/recyclerView5"
+        tools:listitem="@layout/item_movies"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

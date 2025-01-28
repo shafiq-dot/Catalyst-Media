@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/baseColor"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/backPoster"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <ImageView
+        android:layout_below="@id/backPoster"
+        android:id="@+id/moviePoster"
+        android:layout_width="100dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_height="150dp"
+        android:background="@drawable/rounded_image_view"
+        android:clipToOutline="true"/>
+
+
+
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_marginTop="-60dp"
+        android:layout_below="@id/moviePoster"
+        android:layout_toEndOf="@id/moviePoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/font_size_16sp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/moviePoster"
+        android:layout_below="@id/movieTitle"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:weightSum="6"
+        >
+        <TextView
+            android:id="@+id/movieYear"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/font_size_10sp"
+           />
+
+        <TextView
+        android:id="@+id/movieType"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/font_size_10sp"
+ />
+
+        <TextView
+            android:id="@+id/movieDuration"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/font_size_10sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moviePoster"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:weightSum="6"
+        >
+        <TextView
+            android:id="@+id/movieYear2"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:drawablePadding="@dimen/margin_5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/font_size_10sp"
+            app:drawableStartCompat="@drawable/baseline_calendar_today_18" />
+        <TextView
+            android:id="@+id/movieDuration2"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:drawablePadding="@dimen/margin_5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/font_size_10sp"
+            app:drawableStartCompat="@drawable/baseline_access_time_18" />
+        <TextView
+            android:id="@+id/movieType2"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/font_size_10sp"
+
+            android:drawablePadding="@dimen/margin_5dp"
+            app:drawableStartCompat="@drawable/outline_video_file_18" />
+    </LinearLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        app:tabTextColor="@color/selected_tab_white_color"
+        app:tabIndicatorHeight="1dp"
+        app:tabSelectedTextColor="@color/selected_tab_white_color"
+        app:tabIndicatorColor="@color/selected_tab_white_color" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/movieOverview"
+        android:layout_below="@id/tab_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/font_size_12sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/tab_layout2"
+        android:id="@+id/castRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        />
+</RelativeLayout>
